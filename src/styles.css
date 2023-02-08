@@ -13,6 +13,14 @@ body{
     margin: 0;
 }
 
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+
 /* Nav */
 
 .navBar{
@@ -122,20 +130,43 @@ align-items: center;
     display: flex;
 }
 
+}
 
 
+/* Slider */
+.slider {
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    left: 0;
+    display: flex;
+}
+
+.navigation{
+    display: flex;
+    position: absolute;
+    width: 20%;
+    bottom: 6%;
+    left: 50%;
+    right: 50%;
+    justify-content: space-around;
+    transform: translate(-50%, -50%);
+    gap: 5%;
+}
+
+.navigation label{
+    display: block;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: white;
 }
 
 
 
 /* Dropdown */
-
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-}
 
 .dropdown {
     min-height: 15em;
