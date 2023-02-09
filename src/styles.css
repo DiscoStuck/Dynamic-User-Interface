@@ -19,6 +19,7 @@ body{
     align-items: center;
     flex-direction: column;
     flex: 1;
+    padding: 20px;
 }
 
 /* Nav */
@@ -142,6 +143,7 @@ align-items: center;
 .slides {
     left: 0;
     display: flex;
+    transition: 0.3s;
 }
 
 .navigation{
@@ -164,12 +166,50 @@ align-items: center;
     background-color: white;
 }
 
+.navigation label:hover{
+box-shadow: 0 0 0 3px white;
+}
 
+input[type='radio'] {
+    display: none;
+}
+
+
+#radioButton1:checked ~ .navigation .navButton1 {
+box-shadow: 0 0 0 3px white;
+}
+
+#radioButton1:checked ~ .slides {
+margin-left: 0;
+}
+
+#radioButton2:checked ~ .navigation .navButton2 {
+    box-shadow: 0 0 0 3px white;
+}
+
+#radioButton2:checked ~ .slides {
+    margin-left: -100%;
+}
+
+#radioButton3:checked ~ .navigation .navButton3 {
+    box-shadow: 0 0 0 3px white;
+}
+
+#radioButton3:checked ~ .slides {
+    margin-left: -200%;
+}
+
+#radioButton4:checked ~ .navigation .navButton4 {
+    box-shadow: 0 0 0 3px white;
+}
+
+#radioButton4:checked ~ .slides {
+    margin-left: -300%;
+}
 
 /* Dropdown */
 
 .dropdown {
-    min-height: 15em;
     position: relative;
     margin: 2em;
     

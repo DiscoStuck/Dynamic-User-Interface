@@ -52,7 +52,7 @@ hamburger.addEventListener("click", () => {
 /* Slider */
 function setSliderSize() {
   const windowWidth = window.innerWidth;
-  const sliderWidth = windowWidth * 0.8;
+  const sliderWidth = windowWidth * 0.7;
   const sliderHeight = (sliderWidth / 3) * 2;
   const slidesWidth = sliderWidth * 4;
   console.log(sliderWidth);
@@ -79,3 +79,14 @@ function setSliderSize() {
 window.addEventListener("resize", setSliderSize);
 
 window.dispatchEvent(new Event("resize"));
+
+let sliderCounter = 1;
+
+function automaticSlider() {
+  const slide = document.querySelector("#radioButton" + sliderCounter);
+  slide.checked = true;
+  sliderCounter++;
+  if (sliderCounter > 4) sliderCounter = 1;
+}
+
+setInterval(automaticSlider, 3000);
